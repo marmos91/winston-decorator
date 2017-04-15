@@ -118,18 +118,21 @@ export class GulpFile
     @Task()
     coverage()
     {
-        return gulp.src(['src/**/*.js'])
-            .pipe(istanbul())
+        return gulp.src(['build/src/**/*.js'])
+            .pipe(istanbul({
+                includeUntested: true
+            }))
             .pipe(istanbul.hookRequire());
     }
 
-    @Task()
+    @Task("mocha", ["coverage"])
     mocha()
     {
         return gulp.src ('build/test/**/*.js', {read: false})
-            .pipe (mocha ({noDeprecation: true}))
-            .pipe(istanbul.writeReports())
-            .pipe(istanbul.enforceThresholds({ thresholds: { global: 90 } }));
+            .pipe (mocha ({
+                bail: true
+            }))
+            .pipe(istanbul.writeReports());
     }
 
     /**
