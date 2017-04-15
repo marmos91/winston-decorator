@@ -14,7 +14,7 @@ A decorator version of the winston logger written completely in Typescript.
 `npm install winston-decorator`
 
 ## Usage
-`winston-decorator` is designed to inject a **winston logger** (see https://github.com/winstonjs/winston) on the decorated property of the given class.
+`winston-decorator` is designed to inject a [**winston logger**](https://github.com/winstonjs/winston) on the decorated property of the given class.
 
 For example:
 ```typescript
