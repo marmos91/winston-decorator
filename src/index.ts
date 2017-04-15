@@ -1,7 +1,6 @@
 import * as winston from 'winston';
 import {LoggerInstance} from 'winston';
 import {type} from 'os';
-import set = Reflect.set;
 
 /**
  * Options interface for the logger decorator

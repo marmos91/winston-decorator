@@ -1,10 +1,9 @@
 {
   "name": "winston-decorator",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A decorator version of the winston logger written completely in Typescript.",
-  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha dist/test/**/*.js"
+    "test": "node_modules/.bin/gulp tests"
   },
   "repository": {
     "type": "git",
@@ -14,7 +13,7 @@
     "logger",
     "winston"
   ],
-  "author": "Cubbit srls",
+  "author": "Marco Moschettini Alessandro Petraro",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/marmos91/winston-decorator/issues"
@@ -23,12 +22,23 @@
   "dependencies": {
     "@types/node": "^7.0.12",
     "@types/winston": "^2.3.0",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "reflect-metadata": "^0.1.9"
   },
   "devDependencies": {
     "@types/chai": "^3.5.0",
     "@types/mocha": "^2.2.40",
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-shell": "^0.6.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-typescript": "^3.1.5",
+    "gulpclass": "0.1.1",
+    "mocha": "^3.2.0",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.2.1"
   }
 }

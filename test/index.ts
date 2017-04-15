@@ -27,7 +27,7 @@ describe('logger', function()
             private _logger: LoggerInstance;
             constructor()
             {
-                expect(this._logger.transports.console['label']).to.be.equal(this.constructor.name);
+                expect(this._logger.transports.console['label']).to.be.equal(this.constructor['name']);
             }
         }
 
@@ -39,7 +39,7 @@ describe('logger', function()
         let test_label = 'test_label';
         class test_class
         {
-            @logger(null, {label: test_label})
+            @logger(undefined, {label: test_label})
             private _logger: LoggerInstance;
             constructor()
             {
@@ -87,7 +87,7 @@ describe('logger', function()
 
         class test_class
         {
-            @logger(null, {test_environment: 'testing_purpose'})
+            @logger(undefined, {test_environment: 'testing_purpose'})
             private _logger: LoggerInstance;
             constructor()
             {
