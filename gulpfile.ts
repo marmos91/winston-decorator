@@ -7,6 +7,7 @@ const shell = require("gulp-shell");
 const istanbul = require("gulp-istanbul");
 const sourcemaps = require("gulp-sourcemaps");
 const ts = require("gulp-typescript");
+const remapIstanbul = require("remap-istanbul/lib/gulpRemapIstanbul");
 
 @Gulpclass()
 export class GulpFile
@@ -125,6 +126,14 @@ export class GulpFile
             .pipe(istanbul.hookRequire());
     }
 
+    @Task()
+    coverageRemap()
+    {
+        return gulp.src("./coverage/coverage-final.json")
+            .pipe(remapIstanbul())
+            .pipe(gulp.dest("./coverage"));
+    }
+
     @Task("mocha", ["coverage"])
     mocha()
     {
@@ -141,6 +150,6 @@ export class GulpFile
     @SequenceTask()
     tests()
     {
-        return ["compile", "mocha"];
+        return ["compile", "mocha", "coverageRemap"];
     }
 }
