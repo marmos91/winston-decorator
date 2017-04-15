@@ -1,9 +1,12 @@
 # Winston Decorator
 
+[![npm](https://img.shields.io/npm/v/npm.svg)]()
 [![npm version](https://badge.fury.io/js/winston-decorator.svg)](https://badge.fury.io/js/winston-decorator)
 [![Build Status](https://travis-ci.org/marmos91/winston-decorator.svg?branch=master)](https://travis-ci.org/marmos91/winston-decorator)
 [![codecov](https://codecov.io/gh/marmos91/winston-decorator/branch/master/graph/badge.svg)](https://codecov.io/gh/marmos91/winston-decorator)
 [![Dependencies](https://david-dm.org/marmos91/winston-decorator.svg)](https://david-dm.org/marmos91/winston-decorator.svg)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
 
 A decorator version of the winston logger written completely in Typescript.
 
@@ -11,7 +14,7 @@ A decorator version of the winston logger written completely in Typescript.
 `npm install winston-decorator`
 
 ## Usage
-`winston-decorator` is designed to inject a **winston logger** (see https://github.com/winstonjs/winston) on the decorated property of the given class.
+`winston-decorator` is designed to inject a [**winston logger**](https://github.com/winstonjs/winston) on the decorated property of the given class.
 
 For example:
 ```typescript

@@ -1,6 +1,6 @@
 {
   "name": "winston-decorator",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A decorator version of the winston logger written completely in Typescript.",
   "scripts": {
     "test": "node_modules/.bin/gulp tests"
