@@ -1,5 +1,11 @@
 # Winston Decorator
+
+[![npm version](https://badge.fury.io/js/winston-decorator.svg)](https://badge.fury.io/js/winston-decorator)
 [![Build Status](https://travis-ci.org/marmos91/winston-decorator.svg?branch=master)](https://travis-ci.org/marmos91/winston-decorator)
+[![Test Coverage](https://codeclimate.com/github/marmos91/winston-decorator/badges/coverage.svg)](https://codeclimate.com/github/marmos91/winston-decorator/coverage)
+[![Code Climate](https://codeclimate.com/github/marmos91/winston-decorator/badges/gpa.svg)](https://codeclimate.com/github/marmos91/winston-decorator)
+[![Dependencies](https://david-dm.org/marmos91/winston-decorator.svg)](https://david-dm.org/marmos91/winston-decorator.svg)
+
 A decorator version of the winston logger written completely in Typescript.
 
 ## Installation
@@ -88,4 +94,4 @@ In this case you can run the program with `NODE_ENV=my_custom_env mocha test.js`
 `npm test`
 
 ## Authors
-**Marco Moschettini**, **Alessandro Petraro**
+[**Marco Moschettini**](https://github.com/marmos91), [**Alessandro Petraro**](https://github.com/alessandro-p)
