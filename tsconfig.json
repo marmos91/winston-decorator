@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "outDir": "dist/",
-    "target": "es6",
-    "declaration": true,
+    "outDir": "build/",
+    "target": "es5",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "declaration": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "stripInternal": true,
+    "pretty": true,
+    "strictNullChecks": true
   },
   "exclude": [
+    "build",
     "node_modules"
   ]
 }

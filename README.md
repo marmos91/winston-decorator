@@ -2,8 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/winston-decorator.svg)](https://badge.fury.io/js/winston-decorator)
 [![Build Status](https://travis-ci.org/marmos91/winston-decorator.svg?branch=master)](https://travis-ci.org/marmos91/winston-decorator)
-[![Test Coverage](https://codeclimate.com/github/marmos91/winston-decorator/badges/coverage.svg)](https://codeclimate.com/github/marmos91/winston-decorator/coverage)
-[![Code Climate](https://codeclimate.com/github/marmos91/winston-decorator/badges/gpa.svg)](https://codeclimate.com/github/marmos91/winston-decorator)
+[![codecov](https://codecov.io/gh/marmos91/winston-decorator/branch/master/graph/badge.svg)](https://codecov.io/gh/marmos91/winston-decorator)
 [![Dependencies](https://david-dm.org/marmos91/winston-decorator.svg)](https://david-dm.org/marmos91/winston-decorator.svg)
 
 A decorator version of the winston logger written completely in Typescript.
