@@ -1,0 +1,35 @@
+# You can use any Docker image from Docker Hub or your own container registry
+language: node_js
+node_js:
+  - "7.7.1"
+
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
+branches:
+  only:
+  - master
+
+before_install:
+  - npm config set spin false
+
+install:
+  - npm uninstall typescript
+  - npm install -g typescript
+  - npm install --development
+
+cache:
+  directories:
+    - "node_modules"
+
+before_script:
+  - tsc
+
+script:
+  - npm test
