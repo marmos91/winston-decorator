@@ -9,6 +9,10 @@ const sourcemaps = require("gulp-sourcemaps");
 const ts = require("gulp-typescript");
 const remapIstanbul = require("remap-istanbul/lib/gulpRemapIstanbul");
 
+/**
+ * @author Marco Moschettini
+ * @version 0.0.1
+ */
 @Gulpclass()
 export class GulpFile
 {
