@@ -1,12 +1,10 @@
-import * as winston from 'winston';
-import {LoggerInstance} from 'winston';
-import {type} from 'os';
+import {Logger, LoggerOptions, LoggerInstance, transports} from 'winston';
 
 /**
  * Options interface for the logger decorator
  * @interface
  * @author Marco Moschettini Alessandro Petraro
- * @version 0.0.1
+ * @version 0.0.8
  */
 export interface DecoratorOptions
 {
@@ -26,9 +24,9 @@ export interface DecoratorOptions
  * @param settings {winston.LoggerOptions} see https://github.com/winstonjs/winston
  * @param options {DecoratorOptions} (optional)
  * @author Marco Moschettini Alessandro Petraro
- * @version 0.0.1
+ * @version 0.0.8
  */
-export function logger(settings?: winston.LoggerOptions | DecoratorOptions, options?: DecoratorOptions)
+export function logger(settings?: LoggerOptions, options?: DecoratorOptions)
 {
     return function(target: any, key: string | symbol)
     {
@@ -37,14 +35,14 @@ export function logger(settings?: winston.LoggerOptions | DecoratorOptions, opti
         {
             let label = (options && options.label) || (target.name || target.constructor.name);
 
-            let logger = new (winston.Logger)(settings);
-            logger.add(winston.transports.Console, {label});
+            let logger = new (Logger)(settings);
+            logger.add(transports.Console, {label});
             target.constructor.prototype[key] = logger;
         }
         else
         {
-            let logger = new (winston.Logger)(settings);
-            logger.add(winston.transports.File, {filename: '/dev/null'});
+            let logger = new (Logger)(settings);
+            logger.add(transports.File, {filename: '/dev/null'});
             target.constructor.prototype[key] = logger;
         }
     }
